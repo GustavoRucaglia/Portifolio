@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>Pórtfolio</title>
+</head>
+<body id="body">
+  <header id="header">
+    <div id="dark-mode">
+      <div id="drkbola"></div>
+    </div>  
+    <h1 class="portifolio">Portfólio</h1>
+    <nav id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburger"></span>
+      </button> 
+      <ul id="menu" role="menu">
+        <li><a href="#sobre" class="link" id="link">Sobre</a></li>
+        <div class="underline" id="underline1"></div>
+        <li><a href="#habilidades" class="link"  id="link1">Hablidades</a></li>
+        <li><a href="#projetos" class="link" id="link2">Projetos</a></li>
+        <li><a href="#contato" class="link" id="link3">Contato</a></li> 
+      </ul>
+    </nav> 
+  </header>
+  <main>
+    <section>
+     <div id="ctinicio">
+     <div id="txtinicio">
+        <div class="letras">P</div><span class="letras">r</span><div class="letras">a</div><div class="letras">z</div><div class="letras">e</div><div class="letras">r</div>
+        <div class="letras">,</div><br>
+        
+        <div class="letras"> G</div>
+        <div class="letras">u</div>
+        <div class="letras">s</div><div class="letras">t</div><div class="letras">a</div><div class="letras">v</div><div class="letras">o</div><div class="letras"> R</div><div class="letras">u</div><div class="letras">c</div><div class="letras">a</div><div class="letras">g</div><div class="letras">l</div><div class="letras">i</div><div class="letras">a</div><br>
+            <div class="letras">D</div><div class="letras">e</div><div class="letras">s</div><div class="letras">e</div><div class="letras">n</div><div class="letras">v</div><div class="letras">o</div><div class="letras">l</div><div class="letras">v</div><div class="letras">e</div><div class="letras">d</div><div class="letras">o</div><div class="letras">r</div><div class="letras"> f</div><di class="letras"v>r</di><div class="letras">o</div><div class="letras">n</div><div class="letras">t</div><div class="letras">-</div><div class="letras">e</div><div class="letras">n</div><di class="letras">d</di>
+     </div>
+     <button id="bntCV">
+        <a href="Currículo.pdf" download="Currículo">Baixar CV</a>
+      </button>
+     <button id="bntct">Entrar em contato</button>
+     </div>
+    </section>
+    <section>
+      <div id="container">
+        <div id="cttriangulo">
+        <div class="triangulo" id="triangulo1"></div>
+        <div class="triangulo" id="triangulo2"></div>
+        </div>
+    <div id="sobre">
+        <br>
+        <h1 class="titulo"> Quem sou eu? </h1>
+        <div class="apresentacao">
+          <p class="txt"> Prazer sou Gustavo, tenho 16 anos e venho estudando toda a área de TI apartir do Ensino  Medio técnico, prioriazando a área do front-end, realizando diversos projetos acadêmicos e estudandos linguagens específicas por fora da escola por diveros cursos, além do front-end também possuo breves conhecimentos em outras aréas como Banco de Dados, Empredorismo e mercado financeiro</p>
+        </div>
+       <h1 class="titulo"> Quais são meus objetivos? </h1>
+       <div class="apresentacao">
+        <p  class="txt"> Tenho como objetivo principal conseguir minha primeira experiência profissional na área de programação, para assim continuar crescendo como profissional aprimorando meus conhecimentos e tecnologias nesse promissor setor</p>
+        </div>
+    </div>
+    <div class="habilidades">
+        <img>
+    </div>
+  </section>
+  </main>
+    <footer>
+
+    </footer>
+    <script>
+      const btnMobile = document.getElementById('btn-mobile'); 
+    (function(){ function toggleMenu(event){ 
+     if (event.type === 'touchstart')event.preventDefault(); 
+     const nav = document.getElementById('nav');
+     nav.classList.toggle('active');
+     const active = nav.classList.contains('active');
+     event.currentTarget.setAttribute('aria-expanded', active);
+    if (active){
+      event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+    }else{
+       event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+        }
+   };
+   btnMobile.addEventListener('click', toggleMenu);
+   btnMobile.addEventListener('touchstart', toggleMenu);
+
+    const link = document.getElementById("link") //$("#link").val()
+    const link1 =  document.getElementById("l qwwwink1")
+    const link2 =  document.getElementById("link2")
+    const link3 =  document.getElementById("link3")
+    link.addEventListener("click", toggleMenu) //$(".link").click(toggleMenu);
+    link1.addEventListener("click", toggleMenu)
+    link2.addEventListener("click", toggleMenu)
+    link3.addEventListener("click", toggleMenu)
+
+    const darkMode = document.getElementById("dark-mode")
+    const header = document.getElementById("header")
+    const container = document.getElementById("container")
+    const body = document.getElementById("body")
+      darkMode.onclick = function()
+      {
+        this.classList.toggle('active')
+        header.classList.toggle('active')
+        container.classList.toggle('active')
+        body.classList.toggle('active')
+      }})()
+      </script>
+   
+</body>
+</html>
